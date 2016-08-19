@@ -4,7 +4,7 @@
   "description": "A decorator for script lazy loading on react component",
   "main": "lib/index.js",
   "scripts": {
-    "build": "babel src --out-dir lib",
+    "build": "babel ./src --out-dir lib",
     "postinstall": "npm run build",
     "test": "karma start"
   },
