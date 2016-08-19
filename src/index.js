@@ -106,6 +106,10 @@ const scriptLoader = (...scripts) => (WrappedComponent) => {
       this._isMounted = false;
     }
 
+    getComponent () {
+      return this.component;
+    }
+
     render () {
       const props = {
         ...this.props,
@@ -113,7 +117,9 @@ const scriptLoader = (...scripts) => (WrappedComponent) => {
       }
 
       return (
-        <WrappedComponent {...props} />
+        <WrappedComponent
+          ref={(ref) => { this.component = ref; }}
+          {...props} />
       )
     }
   }
