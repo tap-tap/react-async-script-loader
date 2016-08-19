@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "babel ./src --out-dir lib",
-    "postinstall": "npm run build",
+    "prepublish": "npm run build",
     "test": "karma start"
   },
   "repository": {
